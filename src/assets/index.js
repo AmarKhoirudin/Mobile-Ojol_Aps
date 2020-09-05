@@ -1,3 +1,2 @@
-import welcomeAuth from './ilustration/welcome-auth.png';
-
-export {welcomeAuth};
+export * from './ilustration';
+export * from './Icons';

@@ -1,10 +1,11 @@
 import React from 'react';
 import {TouchableOpacity, Text} from 'react-native';
 import {colors} from '../../../utils';
+import PropTypes from 'prop-types';
 
-const Button = ({title}) => {
+const Button = ({title, onPress}) => {
   return (
-    <TouchableOpacity style={styles.wrapper.component}>
+    <TouchableOpacity style={styles.wrapper.component} onPress={onPress}>
       <Text style={styles.text.title}>{title}</Text>
     </TouchableOpacity>
   );
@@ -27,6 +28,11 @@ const styles = {
       textAlign: 'center',
     },
   },
+};
+
+Button.propTypes = {
+  title: PropTypes.string,
+  onPress: PropTypes.func,
 };
 
 export default Button;
